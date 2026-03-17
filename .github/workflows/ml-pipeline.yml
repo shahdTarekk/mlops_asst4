@@ -6,6 +6,7 @@ on:
       - main
   pull_request:
 
+
 jobs:
   validate-and-test:
     runs-on: ubuntu-latest
@@ -19,6 +20,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Linter Check
+        run: flake8 .
 
       - name: Model Dry Test
         run: |
